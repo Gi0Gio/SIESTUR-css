@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Gio\\source\\repos\\Turnero\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|c:\\users\\gio\\source\\repos\\turnero\\turnero\\controllers\\windowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|solutionrelative:turnero\\controllers\\windowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|c:\\users\\gio\\source\\repos\\turnero\\turnero\\controllers\\videocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|solutionrelative:turnero\\controllers\\videocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|c:\\users\\gio\\source\\repos\\turnero\\turnero\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|solutionrelative:turnero\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|c:\\users\\gio\\source\\repos\\turnero\\turnero\\controllers\\turncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E21EACA-438A-4BBF-AC59-6BD5B0588662}|Turnero\\Turnero.csproj|solutionrelative:turnero\\controllers\\turncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,19 +63,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WindowController.cs",
+              "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\WindowController.cs",
+              "RelativeDocumentMoniker": "Turnero\\Controllers\\WindowController.cs",
+              "ToolTip": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\WindowController.cs",
+              "RelativeToolTip": "Turnero\\Controllers\\WindowController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:41:27.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VideoController.cs",
+              "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\VideoController.cs",
+              "RelativeDocumentMoniker": "Turnero\\Controllers\\VideoController.cs",
+              "ToolTip": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\VideoController.cs",
+              "RelativeToolTip": "Turnero\\Controllers\\VideoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:41:20.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Turnero\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Turnero\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:41:11.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TurnController.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\TurnController.cs",
               "RelativeDocumentMoniker": "Turnero\\Controllers\\TurnController.cs",
-              "ToolTip": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\TurnController.cs*",
-              "RelativeToolTip": "Turnero\\Controllers\\TurnController.cs*",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFUAAAAqAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\TurnController.cs",
+              "RelativeToolTip": "Turnero\\Controllers\\TurnController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T01:39:36.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AttendController.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\AttendController.cs",
               "RelativeDocumentMoniker": "Turnero\\Controllers\\AttendController.cs",
@@ -76,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Turnero\\Controllers\\AuthController.cs",
@@ -89,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "TurneroDataContext.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\TurneroDataContext.cs",
               "RelativeDocumentMoniker": "Turnero\\TurneroDataContext.cs",
@@ -102,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "TurnoHub.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\TurnoHub.cs",
               "RelativeDocumentMoniker": "Turnero\\TurnoHub.cs",
@@ -114,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\appsettings.json",
               "RelativeDocumentMoniker": "Turnero\\appsettings.json",
@@ -127,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gio\\source\\repos\\Turnero\\Turnero\\Program.cs",
               "RelativeDocumentMoniker": "Turnero\\Program.cs",

@@ -71,7 +71,7 @@ public class AuthController : Controller
             Username = authDto.Username,
             PasswordHash = hashedPassword,
             Role = "User", // Automatically assigned role
-            CreationDate = DateTime.Now
+            CreationDate = DateTime.UtcNow
         };
 
         _context.Users.Add(user);
