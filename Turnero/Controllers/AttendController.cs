@@ -48,7 +48,7 @@ namespace Turnero.Controllers
                 TurnNumber = lastTurn.TurnNumber,
                 UserId = userId,
                 WindowId = windowId,
-                AttendanceDate = DateTime.Now
+                AttendanceDate = DateTime.UtcNow
             };
             try
             {
