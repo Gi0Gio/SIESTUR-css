@@ -6,31 +6,31 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔹 Add services to the container
+// 🔹 Add Controllers & Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 🔹 Add Database Context (PostgreSQL)
+// 🔹 PostgreSQL Database (Railway)
 builder.Services.AddDbContext<TurneroDataContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 🔹 Add CORS policy
+// 🔹 CORS for Netlify frontend
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("FrontendPolicy", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins("https://siestur.netlify.app")
               .AllowAnyMethod()
-              .AllowAnyHeader();
+              .AllowAnyHeader()
+              .AllowCredentials(); // Si usas cookies o autenticación con JWT
     });
 });
 
-// 🔹 Retrieve JWT settings from appsettings.json
+// 🔹 JWT Authentication
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var secretKey = Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]);
 
-// 🔹 Configure JWT authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -50,14 +50,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
-// 📌 Enable SignalR
+// 🔹 SignalR
 builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-// ✅ Correct middleware order
-app.UseRouting(); // 🔸 Necesario antes de CORS
-app.UseCors("AllowAll");
+// 🔹 Use CORS globally
+app.UseCors("FrontendPolicy");
 
 if (app.Environment.IsDevelopment())
 {
@@ -66,7 +65,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
