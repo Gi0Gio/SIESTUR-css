@@ -6,21 +6,14 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-// ✅ Configurar Kestrel para que use el puerto 7124
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(5173);
-});
-
 // 🔹 Add services to the container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 🔹 Add Database Context (SQLite)
+// 🔹 Add Database Context (PostgreSQL - Supabase)
 builder.Services.AddDbContext<TurneroDataContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // 🔹 Add CORS policy
 builder.Services.AddCors(options =>
@@ -76,21 +69,6 @@ app.UseHttpsRedirection();
 // 🔹 Enable authentication & authorization
 app.UseAuthentication();
 app.UseAuthorization();
-
-// ✅ Serve static files (React frontend)
-app.UseDefaultFiles();
-app.UseStaticFiles();
-
-// ✅ Handle React routes (SPA fallback to index.html)
-app.Use(async (context, next) =>
-{
-    await next();
-    if (context.Response.StatusCode == 404 && !context.Request.Path.Value.StartsWith("/api"))
-    {
-        context.Response.StatusCode = 200;
-        await context.Response.SendFileAsync("wwwroot/index.html");
-    }
-});
 
 // 🔹 Map API Controllers
 app.MapControllers();

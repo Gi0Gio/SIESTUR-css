@@ -83,7 +83,7 @@ namespace Turnero.Controllers
             var newTurn = new Turn
             {
                 TurnNumber = newTurnNumber,
-                TurnDate = DateTime.Now
+                TurnDate = DateTime.UtcNow
             };
 
             _context.Turns.Add(newTurn);
