@@ -1,0 +1,9 @@
+# .NET
+bin/
+obj/
+.vscode/
+*.user
+*.suo
+*.db
+*.db-journal
+wwwroot/  # si ya no usas wwwroot local
