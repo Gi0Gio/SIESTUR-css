@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 🔹 Add Database Context (PostgreSQL - Supabase)
+// 🔹 Add Database Context (PostgreSQL)
 builder.Services.AddDbContext<TurneroDataContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -55,7 +55,8 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-// 🔹 Enable CORS globally
+// ✅ Correct middleware order
+app.UseRouting(); // 🔸 Necesario antes de CORS
 app.UseCors("AllowAll");
 
 if (app.Environment.IsDevelopment())
@@ -66,15 +67,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// 🔹 Enable authentication & authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 🔹 Map API Controllers
 app.MapControllers();
-
-// 📌 Register SignalR Hub
 app.MapHub<TurnoHub>("/turnoHub");
 
-// 🔥 Start application
 app.Run();
