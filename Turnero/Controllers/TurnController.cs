@@ -48,7 +48,7 @@ namespace Turnero.Controllers
         [HttpPost("addTurn")]
         public async Task<ActionResult> AddTurn()
         {
-            var today = DateTime.Today;
+            var today = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
 
             // Get the last attended turn (highest attended number)
             var lastAttended = await _context.Attends
